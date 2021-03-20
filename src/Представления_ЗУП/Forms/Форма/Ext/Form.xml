@@ -1,0 +1,1219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКолонки" id="87">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа колонки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа колонки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="88"/>
+			<ChildItems>
+				<Pages name="ГруппаСтраницы" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<Page name="ГруппаПериоды" id="73">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Периоды</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа периоды</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаПериодыРасширеннаяПодсказка" id="74"/>
+							<ChildItems>
+								<CheckBoxField name="Периоды_Использовать" id="89">
+									<DataPath>Периоды_Использовать</DataPath>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Периоды_ИспользоватьКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="Периоды_ИспользоватьРасширеннаяПодсказка" id="91"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="Периоды_НачалоИнтервала" id="78">
+									<DataPath>Периоды_НачалоИнтервала</DataPath>
+									<ContextMenu name="Периоды_НачалоИнтервалаКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="Периоды_НачалоИнтервалаРасширеннаяПодсказка" id="80"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<InputField name="Периоды_ОкончаниеИнтервала" id="81">
+									<DataPath>Периоды_ОкончаниеИнтервала</DataPath>
+									<ContextMenu name="Периоды_ОкончаниеИнтервалаКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="Периоды_ОкончаниеИнтервалаРасширеннаяПодсказка" id="83"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<InputField name="Периоды_Периодичность" id="84">
+									<DataPath>Периоды_Периодичность</DataPath>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string">ДЕНЬ</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string">МЕСЯЦ</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="Периоды_ПериодичностьКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="Периоды_ПериодичностьРасширеннаяПодсказка" id="86"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="Периоды_ИспользоватьКонецПериода" id="75">
+									<DataPath>Периоды_ИспользоватьКонецПериода</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Периоды_ИспользоватьКонецПериодаКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="Периоды_ИспользоватьКонецПериодаРасширеннаяПодсказка" id="77"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="Периоды_ДобавитьВыборкуСотрудников" id="101">
+									<DataPath>Периоды_ДобавитьВыборкуСотрудников</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Периоды_ДобавитьВыборкуСотрудниковКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="Периоды_ДобавитьВыборкуСотрудниковРасширеннаяПодсказка" id="103"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаКадровыеДанныеСотрудников" id="46">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кадровые данные сотрудников</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кадровые данные сотрудников</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаКадровыеДанныеСотрудниковРасширеннаяПодсказка" id="47"/>
+							<ChildItems>
+								<CheckBoxField name="КадровыеДанныеСотрудников_Использовать" id="92">
+									<DataPath>КадровыеДанныеСотрудников_Использовать</DataPath>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КадровыеДанныеСотрудников_ИспользоватьКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="КадровыеДанныеСотрудников_ИспользоватьРасширеннаяПодсказка" id="94"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="КадровыеДанныеСотрудников_ИмяТаблицы" id="54">
+									<DataPath>КадровыеДанныеСотрудников_ИмяТаблицы</DataPath>
+									<ContextMenu name="КадровыеДанныеСотрудников_ИмяТаблицыКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="КадровыеДанныеСотрудников_ИмяТаблицыРасширеннаяПодсказка" id="56"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<InputField name="КадровыеДанныеСотрудников_ПсевдонимТаблицы" id="68">
+									<DataPath>КадровыеДанныеСотрудников_ПсевдонимТаблицы</DataPath>
+									<ContextMenu name="КадровыеДанныеСотрудников_ПсевдонимТаблицыКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="КадровыеДанныеСотрудников_ПсевдонимТаблицыРасширеннаяПодсказка" id="70"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<InputField name="КадровыеДанныеСотрудников_ТаблицаДляПомещения" id="65">
+									<DataPath>КадровыеДанныеСотрудников_ТаблицаДляПомещения</DataPath>
+									<ContextMenu name="КадровыеДанныеСотрудников_ТаблицаДляПомещенияКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаДляПомещенияРасширеннаяПодсказка" id="67"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаКадровыеДанныеСотрудников_ЗначенияПараметров" id="38">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Значения параметров</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кадровые данные сотрудников значения параметров</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаКадровыеДанныеСотрудников_ЗначенияПараметровРасширеннаяПодсказка" id="39"/>
+									<ChildItems>
+										<CheckBoxField name="КадровыеДанныеСотрудников_ТолькоРазрешенные" id="32">
+											<DataPath>КадровыеДанныеСотрудников_ТолькоРазрешенные</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="КадровыеДанныеСотрудников_ТолькоРазрешенныеКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="КадровыеДанныеСотрудников_ТолькоРазрешенныеРасширеннаяПодсказка" id="34"/>
+											<Events>
+												<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+											</Events>
+										</CheckBoxField>
+										<CheckBoxField name="КадровыеДанныеСотрудников_ФормироватьСПериодичностьДень" id="35">
+											<DataPath>КадровыеДанныеСотрудников_ФормироватьСПериодичностьДень</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="КадровыеДанныеСотрудников_ФормироватьСПериодичностьДеньКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="КадровыеДанныеСотрудников_ФормироватьСПериодичностьДеньРасширеннаяПодсказка" id="37"/>
+											<Events>
+												<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<Table name="КадровыеДанныеСотрудников_ТаблицаПолей" id="1">
+									<Representation>List</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>КадровыеДанныеСотрудников_ТаблицаПолей</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="КадровыеДанныеСотрудников_ТаблицаПолейКонтекстноеМеню" id="2"/>
+									<AutoCommandBar name="КадровыеДанныеСотрудников_ТаблицаПолейКоманднаяПанель" id="3">
+										<ChildItems>
+											<ButtonGroup name="КадровыеДанныеСотрудниковГруппаИзменитьФлажки" id="48">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Кадровые данные сотрудников группа изменить флажки</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Кадровые данные сотрудников группа изменить флажки</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Representation>Compact</Representation>
+												<ExtendedTooltip name="КадровыеДанныеСотрудниковГруппаИзменитьФлажкиРасширеннаяПодсказка" id="49"/>
+												<ChildItems>
+													<Button name="КадровыеДанныеСотрудниковКадровыеДанныеСотрудников_УстановитьФлажки" id="50">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.КадровыеДанныеСотрудников_УстановитьФлажки</CommandName>
+														<ExtendedTooltip name="КадровыеДанныеСотрудниковКадровыеДанныеСотрудников_УстановитьФлажкиРасширеннаяПодсказка" id="51"/>
+													</Button>
+													<Button name="КадровыеДанныеСотрудниковКадровыеДанныеСотрудников_СнятьФлажки" id="52">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.КадровыеДанныеСотрудников_СнятьФлажки</CommandName>
+														<ExtendedTooltip name="КадровыеДанныеСотрудниковКадровыеДанныеСотрудников_СнятьФлажкиРасширеннаяПодсказка" id="53"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+											<ButtonGroup name="КадровыеДанныеСотрудников_ТаблицаПолейГруппаПоиск" id="63">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Кадровые данные сотрудников таблица полей группа поиск</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Кадровые данные сотрудников таблица полей группа поиск</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Representation>Compact</Representation>
+												<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаПолейГруппаПоискРасширеннаяПодсказка" id="64"/>
+												<ChildItems>
+													<Button name="КадровыеДанныеСотрудников_ТаблицаПолейОтменитьПоиск" id="61">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.КадровыеДанныеСотрудников_ТаблицаПолей.StandardCommand.CancelSearch</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаПолейОтменитьПоискРасширеннаяПодсказка" id="62"/>
+													</Button>
+													<Button name="КадровыеДанныеСотрудников_ТаблицаПолейНайти" id="59">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.КадровыеДанныеСотрудников_ТаблицаПолей.StandardCommand.Find</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаПолейНайтиРасширеннаяПодсказка" id="60"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаПолейРасширеннаяПодсказка" id="4"/>
+									<SearchStringAddition name="КадровыеДанныеСотрудников_ТаблицаПолейСтрокаПоиска" id="5">
+										<AdditionSource>
+											<Item>КадровыеДанныеСотрудников_ТаблицаПолей</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КадровыеДанныеСотрудников_ТаблицаПолейСтрокаПоискаКонтекстноеМеню" id="6"/>
+										<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаПолейСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="КадровыеДанныеСотрудников_ТаблицаПолейСостояниеПросмотра" id="8">
+										<AdditionSource>
+											<Item>КадровыеДанныеСотрудников_ТаблицаПолей</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КадровыеДанныеСотрудников_ТаблицаПолейСостояниеПросмотраКонтекстноеМеню" id="9"/>
+										<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаПолейСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="КадровыеДанныеСотрудников_ТаблицаПолейУправлениеПоиском" id="11">
+										<AdditionSource>
+											<Item>КадровыеДанныеСотрудников_ТаблицаПолей</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="КадровыеДанныеСотрудников_ТаблицаПолейУправлениеПоискомКонтекстноеМеню" id="12"/>
+										<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаПолейУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<CheckBoxField name="КадровыеДанныеСотрудниковПометка" id="26">
+											<DataPath>КадровыеДанныеСотрудников_ТаблицаПолей.Пометка</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="КадровыеДанныеСотрудниковПометкаКонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="КадровыеДанныеСотрудниковПометкаРасширеннаяПодсказка" id="28"/>
+											<Events>
+												<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="КадровыеДанныеСотрудниковИмяПоля" id="14">
+											<DataPath>КадровыеДанныеСотрудников_ТаблицаПолей.ИмяПоля</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КадровыеДанныеСотрудниковИмяПоляКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="КадровыеДанныеСотрудниковИмяПоляРасширеннаяПодсказка" id="16"/>
+										</InputField>
+										<InputField name="КадровыеДанныеСотрудниковПутьПоляСКД" id="23">
+											<DataPath>КадровыеДанныеСотрудников_ТаблицаПолей.ПутьПоляСКД</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КадровыеДанныеСотрудниковПутьПоляСКДКонтекстноеМеню" id="24"/>
+											<ExtendedTooltip name="КадровыеДанныеСотрудниковПутьПоляСКДРасширеннаяПодсказка" id="25"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаДанныеУчетаВремениИСостоянийСотрудников" id="104">
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные учета времени и состояний сотрудников</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа данные учета времени и состояний сотрудников</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаДанныеУчетаВремениИСостоянийСотрудниковРасширеннаяПодсказка" id="105"/>
+							<ChildItems>
+								<CheckBoxField name="ДанныеУчетаВремениИСостоянийСотрудников_Использовать" id="106">
+									<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_Использовать</DataPath>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ИспользоватьКонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ИспользоватьРасширеннаяПодсказка" id="108"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ДанныеУчетаВремениИСостоянийСотрудников_ТолькоРазрешенные" id="109">
+									<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_ТолькоРазрешенные</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ТолькоРазрешенныеКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТолькоРазрешенныеРасширеннаяПодсказка" id="111"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаАктуальности" id="112">
+									<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_ДатаАктуальности</DataPath>
+									<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаАктуальностиКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаАктуальностиРасширеннаяПодсказка" id="114"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаНачала" id="115">
+									<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_ДатаНачала</DataPath>
+									<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаНачалаКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаНачалаРасширеннаяПодсказка" id="117"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаОкончания" id="118">
+									<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_ДатаОкончания</DataPath>
+									<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаОкончанияКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаОкончанияРасширеннаяПодсказка" id="120"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДанныеУчетаВремениИСостоянийСотрудников_МесяцДатаНачала" id="124">
+									<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_МесяцДатаНачала</DataPath>
+									<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_МесяцДатаНачалаКонтекстноеМеню" id="125"/>
+									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_МесяцДатаНачалаРасширеннаяПодсказка" id="126"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДанныеУчетаВремениИСостоянийСотрудников_МесяцДатаОкончания" id="127">
+									<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_МесяцДатаОкончания</DataPath>
+									<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_МесяцДатаОкончанияКонтекстноеМеню" id="128"/>
+									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_МесяцДатаОкончанияРасширеннаяПодсказка" id="129"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДанныеУчетаВремениИСостоянийСотрудников_РассчитыватьПлановоеВремя" id="130">
+									<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_РассчитыватьПлановоеВремя</DataPath>
+									<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_РассчитыватьПлановоеВремяКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_РассчитыватьПлановоеВремяРасширеннаяПодсказка" id="132"/>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+								</InputField>
+								<Table name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей" id="133">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейКонтекстноеМеню" id="134"/>
+									<AutoCommandBar name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейКоманднаяПанель" id="135">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<ButtonGroup name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейГруппаИзменитьФлажки" id="165">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Данные учета времени и состояний сотрудников таблица полей группа изменить флажки</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Данные учета времени и состояний сотрудников таблица полей группа изменить флажки</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Representation>Compact</Representation>
+												<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейГруппаИзменитьФлажкиРасширеннаяПодсказка" id="166"/>
+												<ChildItems>
+													<Button name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейДанныеУчетаВремениИСостоянийСотрудников_УстановитьФлажки" id="161">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ДанныеУчетаВремениИСостоянийСотрудников_УстановитьФлажки</CommandName>
+														<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейДанныеУчетаВремениИСостоянийСотрудников_УстановитьФлажкиРасширеннаяПодсказка" id="162"/>
+													</Button>
+													<Button name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейДанныеУчетаВремениИСостоянийСотрудников_СнятьФлажки" id="163">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ДанныеУчетаВремениИСостоянийСотрудников_СнятьФлажки</CommandName>
+														<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейДанныеУчетаВремениИСостоянийСотрудников_СнятьФлажкиРасширеннаяПодсказка" id="164"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейРасширеннаяПодсказка" id="136"/>
+									<SearchStringAddition name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейСтрокаПоиска" id="137">
+										<AdditionSource>
+											<Item>ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейСтрокаПоискаКонтекстноеМеню" id="138"/>
+										<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейСтрокаПоискаРасширеннаяПодсказка" id="139"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейСостояниеПросмотра" id="140">
+										<AdditionSource>
+											<Item>ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейСостояниеПросмотраКонтекстноеМеню" id="141"/>
+										<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейСостояниеПросмотраРасширеннаяПодсказка" id="142"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейУправлениеПоиском" id="143">
+										<AdditionSource>
+											<Item>ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейУправлениеПоискомКонтекстноеМеню" id="144"/>
+										<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейУправлениеПоискомРасширеннаяПодсказка" id="145"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
+									</Events>
+									<ChildItems>
+										<CheckBoxField name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейПометка" id="158">
+											<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей.Пометка</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейПометкаКонтекстноеМеню" id="159"/>
+											<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейПометкаРасширеннаяПодсказка" id="160"/>
+										</CheckBoxField>
+										<InputField name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейИмяПоля" id="146">
+											<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей.ИмяПоля</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейИмяПоляКонтекстноеМеню" id="147"/>
+											<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейИмяПоляРасширеннаяПодсказка" id="148"/>
+										</InputField>
+										<InputField name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейПутьПоляСКД" id="155">
+											<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей.ПутьПоляСКД</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейПутьПоляСКДКонтекстноеМеню" id="156"/>
+											<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейПутьПоляСКДРасширеннаяПодсказка" id="157"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<UsualGroup name="ГруппаПраваяКолонка" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая колонка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<CommandBar name="КоманднаяПанельТекстаЗапроса" id="97">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель текста запроса</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель текста запроса</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="КоманднаяПанельТекстаЗапросаРасширеннаяПодсказка" id="98"/>
+							<ChildItems>
+								<Button name="ПрочитатьЗапрос" id="71">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПрочитатьЗапрос</CommandName>
+									<ExtendedTooltip name="ПрочитатьЗапросРасширеннаяПодсказка" id="72"/>
+								</Button>
+								<Button name="КонструкторЗапроса" id="95">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.КонструкторЗапроса</CommandName>
+									<ExtendedTooltip name="КонструкторЗапросаРасширеннаяПодсказка" id="96"/>
+								</Button>
+								<Button name="КонструкторФактическогоЗапроса" id="99">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.КонструкторФактическогоЗапроса</CommandName>
+									<ExtendedTooltip name="КонструкторФактическогоЗапросаРасширеннаяПодсказка" id="100"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<TextDocumentField name="ТекстЗапроса" id="29">
+							<DataPath>ТекстЗапроса</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="31"/>
+						</TextDocumentField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.Представления_ЗУП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КадровыеДанныеСотрудников_ТаблицаПолей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников таблица полей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяПоля" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПустоеЗначениеНаЯзыкеЗапросов" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пустое значение на языке запросов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗаголовокПоляСКД" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заголовок поля СКД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПутьПоляСКД" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь поля СКД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВРегИмяПоля" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В рег имя поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекстЗапроса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КадровыеДанныеСотрудников_ТолькоРазрешенные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только разрешенные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КадровыеДанныеСотрудников_ФормироватьСПериодичностьДень" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формировать с периодичность день</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КадровыеДанныеСотрудников_ИмяТаблицы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИмяТаблицы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КадровыеДанныеСотрудников_ТаблицаДляПомещения" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица для помещения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КадровыеДанныеСотрудников_ПсевдонимТаблицы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Псевдоним таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Периоды_НачалоИнтервала" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало интервала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Периоды_ОкончаниеИнтервала" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Окончание интервала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Периоды_Периодичность" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периоды периодичность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Периоды_ИспользоватьКонецПериода" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать конец периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Периоды_Использовать" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КадровыеДанныеСотрудников_Использовать" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Периоды_ДобавитьВыборкуСотрудников" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить выборку сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеУчетаВремениИСостоянийСотрудников_Использовать" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеУчетаВремениИСостоянийСотрудников_ТолькоРазрешенные" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только разрешенные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаНачала" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаОкончания" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеУчетаВремениИСостоянийСотрудников_МесяцДатаНачала" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеУчетаВремениИСостоянийСотрудников_МесяцДатаОкончания" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеУчетаВремениИСостоянийСотрудников_ДатаАктуальности" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата актуальности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеУчетаВремениИСостоянийСотрудников_РассчитыватьПлановоеВремя" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитывать плановое время</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников таблица полей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяПоля" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПустоеЗначениеНаЯзыкеЗапросов" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пустое значение на языке запросов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗаголовокПоляСКД" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заголовок поля СКД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПутьПоляСКД" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь поля СКД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВРегИмяПоля" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В рег имя поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КадровыеДанныеСотрудников_УстановитьФлажки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КадровыеДанныеСотрудников_УстановитьФлажки</Action>
+		</Command>
+		<Command name="КадровыеДанныеСотрудников_СнятьФлажки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КадровыеДанныеСотрудников_СнятьФлажки</Action>
+		</Command>
+		<Command name="ПрочитатьЗапрос" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать запрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПрочитатьЗапрос</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КонструкторЗапроса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizard</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КонструкторЗапроса</Action>
+		</Command>
+		<Command name="КонструкторФактическогоЗапроса" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор фактического запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор фактического запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizardTempTableDescription</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КонструкторФактическогоЗапроса</Action>
+		</Command>
+		<Command name="ДанныеУчетаВремениИСостоянийСотрудников_УстановитьФлажки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДанныеУчетаВремениИСостоянийСотрудников_УстановитьФлажки</Action>
+		</Command>
+		<Command name="ДанныеУчетаВремениИСостоянийСотрудников_СнятьФлажки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые данные сотрудников установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДанныеУчетаВремениИСостоянийСотрудников_СнятьФлажки</Action>
+		</Command>
+	</Commands>
+</Form>
