@@ -2,6 +2,13 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПоискШаблоновКода" id="302">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПоискШаблоновКода</CommandName>
+				<ExtendedTooltip name="ФормаПоискШаблоновКодаРасширеннаяПодсказка" id="303"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -159,24 +166,35 @@
 								</CheckBoxField>
 								<InputField name="КадровыеДанныеСотрудников_ИмяТаблицы" id="54">
 									<DataPath>КадровыеДанныеСотрудников_ИмяТаблицы</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
 									<ContextMenu name="КадровыеДанныеСотрудников_ИмяТаблицыКонтекстноеМеню" id="55"/>
-									<ExtendedTooltip name="КадровыеДанныеСотрудников_ИмяТаблицыРасширеннаяПодсказка" id="56"/>
-									<Events>
-										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
-									</Events>
-								</InputField>
-								<InputField name="КадровыеДанныеСотрудников_ПсевдонимТаблицы" id="68">
-									<DataPath>КадровыеДанныеСотрудников_ПсевдонимТаблицы</DataPath>
-									<ContextMenu name="КадровыеДанныеСотрудников_ПсевдонимТаблицыКонтекстноеМеню" id="69"/>
-									<ExtendedTooltip name="КадровыеДанныеСотрудников_ПсевдонимТаблицыРасширеннаяПодсказка" id="70"/>
+									<ExtendedTooltip name="КадровыеДанныеСотрудников_ИмяТаблицыРасширеннаяПодсказка" id="56">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Имя временной таблицы, которая содержит колонки:
+1. Период
+2. Сотрудник</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
 									<Events>
 										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
 									</Events>
 								</InputField>
 								<InputField name="КадровыеДанныеСотрудников_ТаблицаДляПомещения" id="65">
 									<DataPath>КадровыеДанныеСотрудников_ТаблицаДляПомещения</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
 									<ContextMenu name="КадровыеДанныеСотрудников_ТаблицаДляПомещенияКонтекстноеМеню" id="66"/>
-									<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаДляПомещенияРасширеннаяПодсказка" id="67"/>
+									<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаДляПомещенияРасширеннаяПодсказка" id="67">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Должно начинаться с "Представления_КадровыеДанныеСотрудников".
+Может содержать произвольный суффикс.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
 									<Events>
 										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
 									</Events>
@@ -224,6 +242,7 @@
 									<Representation>List</Representation>
 									<ChangeRowSet>false</ChangeRowSet>
 									<ChangeRowOrder>false</ChangeRowOrder>
+									<ChoiceMode>true</ChoiceMode>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -231,6 +250,7 @@
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="КадровыеДанныеСотрудников_ТаблицаПолейКонтекстноеМеню" id="2"/>
 									<AutoCommandBar name="КадровыеДанныеСотрудников_ТаблицаПолейКоманднаяПанель" id="3">
+										<Autofill>false</Autofill>
 										<ChildItems>
 											<ButtonGroup name="КадровыеДанныеСотрудниковГруппаИзменитьФлажки" id="48">
 												<Title>
@@ -319,6 +339,9 @@
 										<ContextMenu name="КадровыеДанныеСотрудников_ТаблицаПолейУправлениеПоискомКонтекстноеМеню" id="12"/>
 										<ExtendedTooltip name="КадровыеДанныеСотрудников_ТаблицаПолейУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ТаблицаПолейВыбор</Event>
+									</Events>
 									<ChildItems>
 										<CheckBoxField name="КадровыеДанныеСотрудниковПометка" id="26">
 											<DataPath>КадровыеДанныеСотрудников_ТаблицаПолей.Пометка</DataPath>
@@ -490,6 +513,38 @@
 													</Button>
 												</ChildItems>
 											</ButtonGroup>
+											<ButtonGroup name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейГруппаПоиск" id="284">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Данные учета времени и состояний сотрудников таблица полей группа поиск</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Данные учета времени и состояний сотрудников таблица полей группа поиск</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Representation>Compact</Representation>
+												<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейГруппаПоискРасширеннаяПодсказка" id="285"/>
+												<ChildItems>
+													<Button name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейОтменитьПоиск" id="286">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей.StandardCommand.CancelSearch</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейОтменитьПоискРасширеннаяПодсказка" id="287"/>
+													</Button>
+													<Button name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейНайти" id="288">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолей.StandardCommand.Find</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейНайтиРасширеннаяПодсказка" id="289"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
 										</ChildItems>
 									</AutoCommandBar>
 									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейРасширеннаяПодсказка" id="136"/>
@@ -518,6 +573,7 @@
 										<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ТаблицаПолейУправлениеПоискомРасширеннаяПодсказка" id="145"/>
 									</SearchControlAddition>
 									<Events>
+										<Event name="Selection">ТаблицаПолейВыбор</Event>
 										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
 									</Events>
 									<ChildItems>
@@ -669,6 +725,38 @@
 													</Button>
 												</ChildItems>
 											</ButtonGroup>
+											<ButtonGroup name="ШтатноеРасписание_ТаблицаПолейГруппаПоиск" id="290">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Штатное расписание таблица полей группа поиск</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Штатное расписание таблица полей группа поиск</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Representation>Compact</Representation>
+												<ExtendedTooltip name="ШтатноеРасписание_ТаблицаПолейГруппаПоискРасширеннаяПодсказка" id="291"/>
+												<ChildItems>
+													<Button name="ШтатноеРасписание_ТаблицаПолейОтменитьПоиск" id="292">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.ШтатноеРасписание_ТаблицаПолей.StandardCommand.CancelSearch</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="ШтатноеРасписание_ТаблицаПолейОтменитьПоискРасширеннаяПодсказка" id="293"/>
+													</Button>
+													<Button name="ШтатноеРасписание_ТаблицаПолейНайти" id="294">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.ШтатноеРасписание_ТаблицаПолей.StandardCommand.Find</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="ШтатноеРасписание_ТаблицаПолейНайтиРасширеннаяПодсказка" id="295"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
 										</ChildItems>
 									</AutoCommandBar>
 									<ExtendedTooltip name="ШтатноеРасписание_ТаблицаПолейРасширеннаяПодсказка" id="194"/>
@@ -696,6 +784,9 @@
 										<ContextMenu name="ШтатноеРасписание_ТаблицаПолейУправлениеПоискомКонтекстноеМеню" id="202"/>
 										<ExtendedTooltip name="ШтатноеРасписание_ТаблицаПолейУправлениеПоискомРасширеннаяПодсказка" id="203"/>
 									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ТаблицаПолейВыбор</Event>
+									</Events>
 									<ChildItems>
 										<CheckBoxField name="ШтатноеРасписание_ТаблицаПолейПометка" id="216">
 											<DataPath>ШтатноеРасписание_ТаблицаПолей.Пометка</DataPath>
@@ -753,21 +844,39 @@
 								</CheckBoxField>
 								<InputField name="СрезПоследних_ИмяРегистра" id="245">
 									<DataPath>СрезПоследних_ИмяРегистра</DataPath>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Имя регистра требуется скопировать из конфигуратора.
-Методика получения списка регистров, поддерживаюих представления не найдена.</v8:content>
-										</v8:item>
-									</ToolTip>
 									<ToolTipRepresentation>Button</ToolTipRepresentation>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<HorizontalStretch>true</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
 									<AutoMarkIncomplete>true</AutoMarkIncomplete>
 									<ContextMenu name="СрезПоследних_ИмяРегистраКонтекстноеМеню" id="246"/>
 									<ExtendedTooltip name="СрезПоследних_ИмяРегистраРасширеннаяПодсказка" id="247"/>
 									<Events>
 										<Event name="OnChange">СрезПоследних_ИмяРегистраПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СрезПоследних_ИмяТаблицы" id="304">
+									<DataPath>СрезПоследних_ИмяТаблицы</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="СрезПоследних_ИмяТаблицыКонтекстноеМеню" id="305"/>
+									<ExtendedTooltip name="СрезПоследних_ИмяТаблицыРасширеннаяПодсказка" id="306">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Указывается имя временной таблицы.
+
+&lt;b&gt;Временная таблица должна содержать колонки: &lt;/&gt;
+1. &lt;b&gt;Период&lt;/&gt; - дата на которую требуется получить срез последних.
+2. &lt;b&gt;Измерения&lt;/&gt; - колонки, которые содержат значения измерений по которым требуется получить срез последних на дату, указанную в колонке период.
+Имена колонок должны соответсвовать именам измерений регистра.
+Допустимо использовать не все измерения.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
 									</Events>
 								</InputField>
 								<UsualGroup name="ГруппаСрезПоследних_ЗначенияПараметров" id="276">
@@ -839,6 +948,38 @@
 													</Button>
 												</ChildItems>
 											</ButtonGroup>
+											<ButtonGroup name="СрезПоследних_ТаблицаПолейГруппаПоиск" id="296">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Срез последних таблица полей группа поиск</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Срез последних таблица полей группа поиск</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Representation>Compact</Representation>
+												<ExtendedTooltip name="СрезПоследних_ТаблицаПолейГруппаПоискРасширеннаяПодсказка" id="297"/>
+												<ChildItems>
+													<Button name="СрезПоследних_ТаблицаПолейОтменитьПоиск" id="298">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.СрезПоследних_ТаблицаПолей.StandardCommand.CancelSearch</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="СрезПоследних_ТаблицаПолейОтменитьПоискРасширеннаяПодсказка" id="299"/>
+													</Button>
+													<Button name="СрезПоследних_ТаблицаПолейНайти" id="300">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.СрезПоследних_ТаблицаПолей.StandardCommand.Find</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="СрезПоследних_ТаблицаПолейНайтиРасширеннаяПодсказка" id="301"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
 										</ChildItems>
 									</AutoCommandBar>
 									<ExtendedTooltip name="СрезПоследних_ТаблицаПолейРасширеннаяПодсказка" id="254"/>
@@ -866,6 +1007,9 @@
 										<ContextMenu name="СрезПоследних_ТаблицаПолейУправлениеПоискомКонтекстноеМеню" id="262"/>
 										<ExtendedTooltip name="СрезПоследних_ТаблицаПолейУправлениеПоискомРасширеннаяПодсказка" id="263"/>
 									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ТаблицаПолейВыбор</Event>
+									</Events>
 									<ChildItems>
 										<CheckBoxField name="СрезПоследних_ТаблицаПолейПометка" id="270">
 											<DataPath>СрезПоследних_ТаблицаПолей.Пометка</DataPath>
@@ -943,11 +1087,6 @@
 									</ToolTip>
 									<ExtendedTooltip name="КоманднаяПанельТекстаЗапросаРасширеннаяПодсказка" id="98"/>
 									<ChildItems>
-										<Button name="ПрочитатьЗапрос" id="71">
-											<Type>CommandBarButton</Type>
-											<CommandName>Form.Command.ПрочитатьЗапрос</CommandName>
-											<ExtendedTooltip name="ПрочитатьЗапросРасширеннаяПодсказка" id="72"/>
-										</Button>
 										<Button name="КонструкторЗапроса" id="95">
 											<Type>CommandBarButton</Type>
 											<CommandName>Form.Command.КонструкторЗапроса</CommandName>
@@ -1188,7 +1327,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ИмяТаблицы</v8:content>
+					<v8:content>Имя таблицы</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1752,6 +1891,22 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="СрезПоследних_ИмяТаблицы" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="КадровыеДанныеСотрудников_УстановитьФлажки" id="1">
@@ -1791,26 +1946,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КадровыеДанныеСотрудников_СнятьФлажки</Action>
-		</Command>
-		<Command name="ПрочитатьЗапрос" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Прочитать запрос</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Кадровые данные сотрудников установить флажки</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>ПрочитатьЗапрос</Action>
-			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="КонструкторЗапроса" id="4">
 			<Title>
@@ -1985,6 +2120,26 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СрезПоследних_УстановитьФлажки</Action>
+		</Command>
+		<Command name="ПоискШаблоновКода" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск шаблонов кода</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск шаблонов кода</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataSearch</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоискШаблоновКода</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
