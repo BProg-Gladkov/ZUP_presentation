@@ -28,6 +28,7 @@
 			<Form>ФормаШаблоныКода</Form>
 			<Template>СКД</Template>
 			<Template>ШаблоныКода_МодульОтчета</Template>
+			<Template>Представления</Template>
 		</ChildObjects>
 	</ExternalDataProcessor>
 </MetaDataObject>

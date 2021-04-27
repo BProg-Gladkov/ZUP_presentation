@@ -47,6 +47,87 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаСтраницыЛеваяКолонкаРасширеннаяПодсказка" id="45"/>
 					<ChildItems>
+						<Page name="ГруппаПредставления" id="372">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Представления</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа представления</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаПредставленияРасширеннаяПодсказка" id="373"/>
+							<ChildItems>
+								<Table name="Представления" id="374">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Представления</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ПредставленияКонтекстноеМеню" id="375"/>
+									<AutoCommandBar name="ПредставленияКоманднаяПанель" id="376">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ПредставленияРасширеннаяПодсказка" id="377"/>
+									<SearchStringAddition name="ПредставленияСтрокаПоиска" id="378">
+										<AdditionSource>
+											<Item>Представления</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПредставленияСтрокаПоискаКонтекстноеМеню" id="379"/>
+										<ExtendedTooltip name="ПредставленияСтрокаПоискаРасширеннаяПодсказка" id="380"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПредставленияСостояниеПросмотра" id="381">
+										<AdditionSource>
+											<Item>Представления</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПредставленияСостояниеПросмотраКонтекстноеМеню" id="382"/>
+										<ExtendedTooltip name="ПредставленияСостояниеПросмотраРасширеннаяПодсказка" id="383"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПредставленияУправлениеПоиском" id="384">
+										<AdditionSource>
+											<Item>Представления</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПредставленияУправлениеПоискомКонтекстноеМеню" id="385"/>
+										<ExtendedTooltip name="ПредставленияУправлениеПоискомРасширеннаяПодсказка" id="386"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<CheckBoxField name="ПредставленияИспользовать" id="393">
+											<DataPath>Представления.Использовать</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПредставленияИспользоватьКонтекстноеМеню" id="394"/>
+											<ExtendedTooltip name="ПредставленияИспользоватьРасширеннаяПодсказка" id="395"/>
+											<Events>
+												<Event name="OnChange">ПредставленияИспользоватьПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ПредставленияИмя" id="387">
+											<DataPath>Представления.Имя</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Представление</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПредставленияИмяКонтекстноеМеню" id="388"/>
+											<ExtendedTooltip name="ПредставленияИмяРасширеннаяПодсказка" id="389"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
 						<Page name="ГруппаПериоды" id="73">
 							<Title>
 								<v8:item>
@@ -62,17 +143,6 @@
 							</ToolTip>
 							<ExtendedTooltip name="ГруппаПериодыРасширеннаяПодсказка" id="74"/>
 							<ChildItems>
-								<CheckBoxField name="Периоды_Использовать" id="89">
-									<DataPath>Периоды_Использовать</DataPath>
-									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="Периоды_ИспользоватьКонтекстноеМеню" id="90"/>
-									<ExtendedTooltip name="Периоды_ИспользоватьРасширеннаяПодсказка" id="91"/>
-									<Events>
-										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
-									</Events>
-								</CheckBoxField>
 								<CheckBoxField name="Периоды_ИспользоватьКонецПериода" id="75">
 									<DataPath>Периоды_ИспользоватьКонецПериода</DataPath>
 									<TitleLocation>Right</TitleLocation>
@@ -173,17 +243,6 @@
 							</ToolTip>
 							<ExtendedTooltip name="ГруппаКадровыеДанныеСотрудниковРасширеннаяПодсказка" id="47"/>
 							<ChildItems>
-								<CheckBoxField name="КадровыеДанныеСотрудников_Использовать" id="92">
-									<DataPath>КадровыеДанныеСотрудников_Использовать</DataPath>
-									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="КадровыеДанныеСотрудников_ИспользоватьКонтекстноеМеню" id="93"/>
-									<ExtendedTooltip name="КадровыеДанныеСотрудников_ИспользоватьРасширеннаяПодсказка" id="94"/>
-									<Events>
-										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
-									</Events>
-								</CheckBoxField>
 								<InputField name="КадровыеДанныеСотрудников_ИмяТаблицы" id="54">
 									<DataPath>КадровыеДанныеСотрудников_ИмяТаблицы</DataPath>
 									<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -407,17 +466,6 @@
 							</ToolTip>
 							<ExtendedTooltip name="ГруппаКадровыеДанныеФизическихЛицРасширеннаяПодсказка" id="308"/>
 							<ChildItems>
-								<CheckBoxField name="КадровыеДанныеФизическихЛиц_Использовать" id="312">
-									<DataPath>КадровыеДанныеФизическихЛиц_Использовать</DataPath>
-									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="КадровыеДанныеФизическихЛиц_ИспользоватьКонтекстноеМеню" id="313"/>
-									<ExtendedTooltip name="КадровыеДанныеФизическихЛиц_ИспользоватьРасширеннаяПодсказка" id="314"/>
-									<Events>
-										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
-									</Events>
-								</CheckBoxField>
 								<InputField name="КадровыеДанныеФизическихЛиц_ИмяТаблицы" id="309">
 									<DataPath>КадровыеДанныеФизическихЛиц_ИмяТаблицы</DataPath>
 									<ContextMenu name="КадровыеДанныеФизическихЛиц_ИмяТаблицыКонтекстноеМеню" id="310"/>
@@ -621,17 +669,6 @@
 							</ToolTip>
 							<ExtendedTooltip name="ГруппаДанныеУчетаВремениИСостоянийСотрудниковРасширеннаяПодсказка" id="105"/>
 							<ChildItems>
-								<CheckBoxField name="ДанныеУчетаВремениИСостоянийСотрудников_Использовать" id="106">
-									<DataPath>ДанныеУчетаВремениИСостоянийСотрудников_Использовать</DataPath>
-									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ДанныеУчетаВремениИСостоянийСотрудников_ИспользоватьКонтекстноеМеню" id="107"/>
-									<ExtendedTooltip name="ДанныеУчетаВремениИСостоянийСотрудников_ИспользоватьРасширеннаяПодсказка" id="108"/>
-									<Events>
-										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
-									</Events>
-								</CheckBoxField>
 								<UsualGroup name="ГруппаДанныеУчетаВремениИСостоянийСотрудников_ЗначениеПараметров" id="222">
 									<Title>
 										<v8:item>
@@ -853,17 +890,6 @@
 							</ToolTip>
 							<ExtendedTooltip name="ГруппаШтатноеРасписаниеРасширеннаяПодсказка" id="181"/>
 							<ChildItems>
-								<CheckBoxField name="ШтатноеРасписание_Использовать" id="182">
-									<DataPath>ШтатноеРасписание_Использовать</DataPath>
-									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ШтатноеРасписание_ИспользоватьКонтекстноеМеню" id="183"/>
-									<ExtendedTooltip name="ШтатноеРасписание_ИспользоватьРасширеннаяПодсказка" id="184"/>
-									<Events>
-										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
-									</Events>
-								</CheckBoxField>
 								<UsualGroup name="ГруппаШтатноеРасписание_ЗначенияПараметров" id="224">
 									<Title>
 										<v8:item>
@@ -1065,17 +1091,6 @@
 							</ToolTip>
 							<ExtendedTooltip name="ГруппаСрезПоследнихРасширеннаяПодсказка" id="244"/>
 							<ChildItems>
-								<CheckBoxField name="СрезПоследних_Использовать" id="248">
-									<DataPath>СрезПоследних_Использовать</DataPath>
-									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="СрезПоследних_ИспользоватьКонтекстноеМеню" id="249"/>
-									<ExtendedTooltip name="СрезПоследних_ИспользоватьРасширеннаяПодсказка" id="250"/>
-									<Events>
-										<Event name="OnChange">ОбновитьТекстЗапросаПриИзмененииНастроеек</Event>
-									</Events>
-								</CheckBoxField>
 								<InputField name="СрезПоследних_ИмяРегистра" id="245">
 									<DataPath>СрезПоследних_ИмяРегистра</DataPath>
 									<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -1089,6 +1104,81 @@
 										<Event name="OnChange">СрезПоследних_ИмяРегистраПриИзменении</Event>
 									</Events>
 								</InputField>
+								<UsualGroup name="ГруппаОсобенностиПрименения" id="407">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Особенности применения</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:SpecialTextColor</TitleTextColor>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа особенности применения</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Collapsible</Behavior>
+									<CollapsedRepresentationTitle>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>См. особенности применения</v8:content>
+										</v8:item>
+									</CollapsedRepresentationTitle>
+									<Collapsed>true</Collapsed>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаОсобенностиПримененияРасширеннаяПодсказка" id="408"/>
+									<ChildItems>
+										<LabelDecoration name="СрезПоследних_ИмяРегистра_Предупреждение_ЕстьМодуль" id="401">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;img 0:501b8c1d-8062-408e-bde8-b6549324713e/&gt;&lt;fontsize 10&gt;Есть модуль с таким же именем как у регистра. 
+&lt;/&gt;&lt;fontsize 8&gt;&lt;colorstyle -22&gt;Возможно там есть методы реализующие особенности работы с регистром. &lt;/&gt;&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СрезПоследних_ИмяРегистра_Предупреждение_ЕстьМодульКонтекстноеМеню" id="402"/>
+											<ExtendedTooltip name="СрезПоследних_ИмяРегистра_Предупреждение_ЕстьМодульРасширеннаяПодсказка" id="403"/>
+										</LabelDecoration>
+										<LabelDecoration name="СрезПоследних_ИмяРегистра_Предупреждение_ЕстьРесурсДействуетДо" id="404">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;img 0:501b8c1d-8062-408e-bde8-b6549324713e/&gt;В регистре есть ресурс "ДействуетДо".
+&lt;colorstyle -22&gt;Использование такого ресурса отличается в разных регистрах.&lt;/&gt;
+&lt;colorstyle -22&gt;Возможные варианты:&lt;/&gt;
+&lt;colorstyle -22&gt;1. После наступления даты начинает действовать предыдущее значение (возвратное событие)&lt;/&gt;
+&lt;colorstyle -22&gt;Выборка будет содержать предыдущую действующую запись регистра.&lt;/&gt;
+&lt;colorstyle -22&gt;2. После наступление даты состояние не определено.&lt;/&gt;
+&lt;colorstyle -22&gt;Выборка НЕ будет содержать записи.&lt;/&gt;
+
+&lt;colorstyle -22&gt;"ДействуетДо" в ВТСрезПоследних может содержать пустую дату, если срок действия записи в регистре не ограничен.&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СрезПоследних_ИмяРегистра_Предупреждение_ЕстьРесурсДействуетДоКонтекстноеМеню" id="405"/>
+											<ExtendedTooltip name="СрезПоследних_ИмяРегистра_Предупреждение_ЕстьРесурсДействуетДоРасширеннаяПодсказка" id="406"/>
+										</LabelDecoration>
+										<LabelDecoration name="СрезПоследних_ИмяРегистра_Предупреждение_ЕстьФлагИспользовать" id="409">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;img :501b8c1d-8062-408e-bde8-b6549324713e:00000000-0000-0000-0000-000000000000/&gt;&lt;fontsize 10&gt;Есть поле "Используется" в выборке. &lt;/&gt;
+&lt;fontsize 8&gt;&lt;colorstyle -22&gt;После окончания действия записи попадают в выборку с "Используется = ЛОЖЬ".&lt;/&gt;&lt;/&gt;
+&lt;fontsize 8&gt;&lt;colorstyle -22&gt;Если требуются только действующие записи, то при использованнии срез последниз надо добавлять условие: "ГДЕ Используется&lt;/&gt;&lt;/&gt;&lt;fontsize 8&gt;&lt;colorstyle -22&gt;".&lt;/&gt;&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СрезПоследних_ИмяРегистра_Предупреждение_ЕстьФлагИспользоватьКонтекстноеМеню" id="410"/>
+											<ExtendedTooltip name="СрезПоследних_ИмяРегистра_Предупреждение_ЕстьФлагИспользоватьРасширеннаяПодсказка" id="411"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
 								<InputField name="СрезПоследних_ИмяТаблицы" id="304">
 									<DataPath>СрезПоследних_ИмяТаблицы</DataPath>
 									<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -1646,44 +1736,11 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="Периоды_Использовать" id="13">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Использовать</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="КадровыеДанныеСотрудников_Использовать" id="14">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Использовать</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="Периоды_ДобавитьВыборкуСотрудников" id="15">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Добавить выборку сотрудников</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="ДанныеУчетаВремениИСостоянийСотрудников_Использовать" id="16">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Использовать</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1875,17 +1932,6 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ШтатноеРасписание_Использовать" id="26">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Использовать</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="ШтатноеРасписание_ТолькоРазрешенные" id="27">
 			<Title>
 				<v8:item>
@@ -2022,17 +2068,6 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="СрезПоследних_Использовать" id="33">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Использовать</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="СрезПоследних_ТаблицаПолей" id="34">
 			<Title>
 				<v8:item>
@@ -2142,17 +2177,6 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="КадровыеДанныеФизическихЛиц_Использовать" id="38">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Использовать</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="КадровыеДанныеФизическихЛиц_ТаблицаДляПомещения" id="40">
@@ -2291,6 +2315,97 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="Представления" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоПредставление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Использовать" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьДоступно" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать доступно</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПредставленияИспользовать</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Представления.ИспользоватьДоступно</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MediumGray</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="КадровыеДанныеСотрудников_УстановитьФлажки" id="1">
